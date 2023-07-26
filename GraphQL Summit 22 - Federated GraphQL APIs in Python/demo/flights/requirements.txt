@@ -1,0 +1,6 @@
+falcon
+graphene
+mongoengine
+graphene-mongo @ git+https://github.com/graphql-python/graphene-mongo@master
+graphene-federation @ git+https://github.com/graphql-python/graphene-federation@v3.0.1
+airportsdata

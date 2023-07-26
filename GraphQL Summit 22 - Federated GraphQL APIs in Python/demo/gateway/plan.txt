@@ -1,0 +1,45 @@
+QueryPlan {
+  Sequence {
+    Fetch(service: "flights") {
+      {
+        flightsQuery {
+          __typename
+          edges {
+            __typename
+            node {
+              __typename
+              flightNumber
+              carrier
+              departureAirport {
+                __typename
+                name
+                code
+              }
+              orderedBy {
+                __typename
+                id
+              }
+            }
+          }
+        }
+      }
+    },
+    Flatten(path: "flightsQuery.edges.@.node.orderedBy") {
+      Fetch(service: "users") {
+        {
+          ... on UserType {
+            __typename
+            id
+          }
+        } =>
+        {
+          ... on UserType {
+            dob
+            email
+            name
+          }
+        }
+      },
+    },
+  },
+}
