@@ -1,0 +1,3 @@
+[submodule "Flaskcon 23 - Federated GraphQL/demo"]
+	path = Flaskcon 23 - Federated GraphQL/demo
+	url = https://github.com/adarshdigievo/flaskcon-federated-graphql-demo.git
