@@ -5,11 +5,12 @@ lock = threading.Lock()
 
 
 def thread_func():
-    print(f"Thread {threading.current_thread().ident} reached thread_func")
+    print(f"Thread {threading.current_thread().ident} waiting to acquire lock")
     lock.acquire()
     try:
         # Critical section of code
-        print(f"Lock acquired at {int(time.time())}, executing critical section")
+        print(
+            f"Lock acquired by {threading.current_thread().ident} at timestamp:{int(time.time())}, executing critical section")
         time.sleep(5)
     finally:
         print(f"Lock Releasing by {threading.current_thread().ident}")
