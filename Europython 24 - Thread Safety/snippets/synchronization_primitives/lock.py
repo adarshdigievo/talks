@@ -21,10 +21,10 @@ thread1 = threading.Thread(target=thread_func).start()
 thread2 = threading.Thread(target=thread_func).start()
 
 """
-Thread 2440 reached thread_func
-Lock acquired at 1720595236, executing critical section
-Thread 12976 reached thread_func
-Lock Releasing by 2440
-Lock acquired at 1720595241, executing critical section
-Lock Releasing by 12976
+Thread 11848 waiting to acquire lock
+Lock acquired by 11848 at timestamp:1720777564, executing critical section
+Thread 29480 waiting to acquire lock
+Lock Releasing by 11848
+Lock acquired by 29480 at timestamp:1720777569, executing critical section
+Lock Releasing by 29480
 """
