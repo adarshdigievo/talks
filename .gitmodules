@@ -1,3 +1,6 @@
 [submodule "Flaskcon 23 - Federated GraphQL/demo"]
 	path = Flaskcon 23 - Federated GraphQL/demo
 	url = https://github.com/adarshdigievo/flaskcon-federated-graphql-demo.git
+[submodule "Djangocon US 24 - Pygoat - Django Security/code"]
+	path = Djangocon US 24 - Pygoat - Django Security/code
+	url = git@github.com:adarshdigievo/pygoat.git
