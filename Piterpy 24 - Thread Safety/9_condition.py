@@ -34,12 +34,12 @@ def add_customer_to_queue(name):
         customer_available_condition.notify()  # .notify() wakes up one of the waiting threads
 
 
-customer_names = [
-    "Customer 1",
-    "Customer 2",
-    "Customer 3",
-    "Customer 4",
-    "Customer 5",
+customers = [
+    ("Customer 1", 1),
+    ("Customer 2", 1),
+    ("Customer 3", 0),
+    ("Customer 4", 1),
+    ("Customer 5", 0)
 ]
 
 if __name__ == "__main__":
@@ -48,8 +48,8 @@ if __name__ == "__main__":
 
         travel_agent_thread = executor.submit(serve_customers)
 
-        for name in customer_names:
+        for name, arrival_delay in customers:
             # Simulate customers arriving at random intervals
-            time.sleep(random.randint(1, 3))
+            time.sleep(arrival_delay)
 
             executor.submit(add_customer_to_queue, name)
