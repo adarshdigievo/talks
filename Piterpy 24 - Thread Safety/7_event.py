@@ -8,7 +8,7 @@ def wait_for_passengers():
     print(
         f"{int(time.time())} : {threading.current_thread().name}: Waiting for flight to land"
     )
-    flight_landed.wait()
+    flight_landed.wait()  # Blocks here until the event is set
     print(
         f"{int(time.time())} : {threading.current_thread().name}:Flight landed, collecting passengers"
     )

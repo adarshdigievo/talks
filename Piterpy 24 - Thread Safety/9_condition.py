@@ -1,4 +1,3 @@
-import random
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -11,13 +10,14 @@ customer_queue = []
 
 def serve_customers():
     while True:
-        with customer_available_condition:
+        with customer_available_condition:  # Acts as a lock
+
             # Wait for a customer to arrive
             while not customer_queue:
                 print(f"{int(time.time())}: Travel agent is waiting for a customer.")
                 customer_available_condition.wait()  # .wait() releases the lock, blocks
 
-            # Serve the customer
+            # The `while` breaks when we have customer. Serve the customer
             customer = customer_queue.pop(0)
             print(f"{int(time.time())}: Travel agent is serving {customer}.")
 
@@ -49,7 +49,7 @@ if __name__ == "__main__":
         travel_agent_thread = executor.submit(serve_customers)
 
         for name, arrival_delay in customers:
-            # Simulate customers arriving at random intervals
+            # Simulate customers arriving at random delays
             time.sleep(arrival_delay)
 
             executor.submit(add_customer_to_queue, name)

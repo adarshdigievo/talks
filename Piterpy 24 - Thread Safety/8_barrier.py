@@ -15,6 +15,7 @@ def traveler():
     print(
         f"{int(time.time())}: Traveler  {threading.current_thread().name} is ready and waiting"
     )
+
     barrier.wait()
     print(
         f"{int(time.time())}: Traveler  {threading.current_thread().name} started the tour"
