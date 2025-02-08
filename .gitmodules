@@ -4,3 +4,6 @@
 [submodule "Djangocon US 24 - Pygoat - Django Security/code"]
 	path = Djangocon US 24 - Pygoat - Django Security/code
 	url = git@github.com:adarshdigievo/pygoat.git
+[submodule "Pycascades 25 - Exploring Pythons Free Threaded Mode"]
+	path = Pycascades 25 - Exploring Pythons Free Threaded Mode
+	url = git@github.com:adarshdigievo/exploring-free-threaded-python.git
