@@ -12,6 +12,9 @@ import math
 pygame.init()
 pygame.font.init()
 
+# Change this to locally downloaded engine binary path
+ENGINE_PATH = r"C:\Users\adarsh\projects\chess\engines\stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe"
+
 # Constants for move evaluation
 EVAL_RANGES = {
     "brilliant": (800, float("inf")),  # Gaining over +8 advantage
@@ -547,7 +550,7 @@ class GameAnalyzer:
 
 async def main():
     # Path to the chess engine (Stockfish or other compatible UCI engine)
-    engine_path = r"C:\Users\adars\projects\chess\engines\stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe"
+    engine_path = ENGINE_PATH
 
     # Initialize pygame and font system
     pygame.init()
