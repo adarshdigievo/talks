@@ -1,0 +1,2 @@
+chess==1.11.2
+chess-board==0.4.1
