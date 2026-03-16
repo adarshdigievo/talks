@@ -7,3 +7,6 @@
 [submodule "Pycascades 25 - Exploring Pythons Free Threaded Mode"]
 	path = Pycascades 25 - Exploring Pythons Free Threaded Mode
 	url = git@github.com:adarshdigievo/exploring-free-threaded-python.git
+[submodule "Pycon JP 25 - Goodbye GIL - Exploring Pythons 3.14 Free Threaded Mode"]
+	path = Pycon JP 25 - Goodbye GIL - Exploring Pythons 3.14 Free Threaded Mode
+	url = https://github.com/adarshdigievo/pycon_jp_goodbye_gil_talk
