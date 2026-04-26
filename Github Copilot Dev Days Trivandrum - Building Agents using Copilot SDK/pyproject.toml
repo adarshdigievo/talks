@@ -1,0 +1,7 @@
+[project]
+name = "ai-agent-using-copilot-sdk"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "github-copilot-sdk==0.1.*"
+]
