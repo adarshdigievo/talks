@@ -13,3 +13,6 @@
 [submodule "Pycon US 26 - Inside an AI Agent SDK/babyagent-sdk"]
 	path = Pycon US 26 - Inside an AI Agent SDK/babyagent-sdk
 	url = https://github.com/serpapi/babyagent
+[submodule "Pycon AU 26 - Goodbye GIL"]
+	path = Pycon AU 26 - Goodbye GIL
+	url = https://github.com/adarshdigievo/PyCon-AU-26---Goodbye-GIL
